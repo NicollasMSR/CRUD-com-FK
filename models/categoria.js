@@ -5,14 +5,12 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
     });
-
-    /* 
       Categoria.associate = (models) => { 
         Categoria.hasMany(models.Produto, { 
           foreignKey: "categoriaId", 
           as: "produtos", 
         }); 
-      };*/
+      };
     return Categoria;
 
 }; 

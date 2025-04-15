@@ -13,12 +13,11 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
   });
-  /* 
     Aluno.associate = (models) => { 
-      Aluno.hasMany(models.Produto, { 
+      Aluno.belongsTo(models.Curso, { 
         foreignKey: "alunoId", 
         as: "alunos", 
       }); 
-    };*/
+    };
   return Aluno;
 };
