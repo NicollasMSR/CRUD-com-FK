@@ -1,0 +1,33 @@
+<h1>Editar Funcionario</h1>
+<form action="/funcionarios/edit/<%= funcionario.id %>" method="POST">
+  <div class="form-group">
+    <label for="nome">Funcionario</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nome"
+      name="nome"
+      value="<%= funcionario.nome %>"
+      required
+    />
+    <label for="email">Email</label>
+    <input
+      type="text"
+      class="form-control"
+      id="email"
+      name="email"
+      value="<%= funcionario.email %>"
+      required
+    />
+    <label for="cpf">CPF</label>
+    <input
+      type="text"
+      class="form-control"
+      id="cpf"
+      name="cpf"
+      value="<%= funcionario.cpf %>"
+      required
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Atualizar</button>
+</form>

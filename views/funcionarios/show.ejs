@@ -1,0 +1,37 @@
+<h1>Funcionarios</h1>
+
+<a href="/funcionarios/add" class="btn btn-success mb-3">Add Funcionario</a>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>CPF</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% funcionarios.forEach(aluno=> { %>
+    <tr>
+      <td><%= funcionario.id %></td>
+      <td><%= funcionario.nome %></td>
+      <td><%= funcionario.email %></td>
+      <td><%= funcionario.cpf %></td>
+      <td>
+        <a href="/funcionarios/edit/<%= funcionario.id %>" class="btn btn-primary btn-sm"
+          >Editar</a
+        >
+        <form
+          action="/funcionarios/delete/<%= funcionario.id %>"
+          method="POST"
+          class="d-inline"
+        >
+          <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+        </form>
+      </td>
+    </tr>
+
+    <% }) %>
+  </tbody>
+</table>
