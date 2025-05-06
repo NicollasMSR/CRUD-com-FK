@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     });
       Curso.associate = (models) => { 
         Curso.hasMany(models.Funcionario, { 
-          foreignKey: "cursoId", 
+          foreignKey: "escolaId", 
           as: "funcionarios", 
         }); 
       };

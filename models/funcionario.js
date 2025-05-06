@@ -14,9 +14,9 @@ module.exports = (sequelize, DataTypes) => {
       },
     });
       Funcionario.associate = (models) => { 
-        Funcionario.belongsTo(models.Curso, { 
+        Funcionario.belongsTo(models.Escola, { 
           foreignKey: "funcionarioid", 
-          as: "funcionarios", 
+          as: "Escolas", 
         }); 
       };
     return Funcionario;

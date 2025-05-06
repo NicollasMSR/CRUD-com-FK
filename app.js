@@ -28,11 +28,27 @@ app.use("/", indexRouter);
 
 const categoriaRouter = require("./routes/categorias");
 
+const alunoRouter = require("./routes/alunos");
+
+const funcionarioRouter = require("./routes/funcionarios");
+
+const escolaRouter = require("./routes/escolas");
+
+const cursoRouter = require("./routes/cursos");
+
+const professoresRouter = require("./routes/professores");
+
 const produtoRouter = require("./routes/produtos");
 
 app.use("/categorias", categoriaRouter);
 
 app.use("/produtos", produtoRouter);
+
+app.use("/alunos", alunoRouter);
+app.use("/funcionarios", funcionarioRouter);
+app.use("/escolas", escolaRouter);
+app.use("/cursos", cursoRouter);
+app.use("/professores", professoresRouter);
 
 // Iniciar o servidor e sincronizar com o banco de dados
 
