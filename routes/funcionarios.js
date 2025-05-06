@@ -26,7 +26,7 @@ router.post("/add", async (req, res) => {
     await Funcionario.create({
       nome: req.body.nome,
       email: req.body.email,
-      rm: req.body.rm,
+      cpf: req.body.cpf,
     });
     res.redirect("/funcionarios");
   } catch (error) {
@@ -48,7 +48,7 @@ router.get("/edit/:id", async (req, res) => {
 //edit aluno - no bd
 router.post("/edit/:id", async (req, res) => {
   await Funcionario.update(
-    { nome: req.body.nome, email: req.body.email, rm: req.body.rm },
+    { nome: req.body.nome, email: req.body.email, rm: req.body.cpf },
     { where: { id: req.params.id } }
   );
   res.redirect("/funcionarios");
